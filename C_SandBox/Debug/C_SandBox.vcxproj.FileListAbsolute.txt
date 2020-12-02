@@ -1,0 +1,2 @@
+D:\Repositories\Projects\C_tests\C_SandBox\Debug\C_SandBox.exe
+D:\Repositories\Projects\C_tests\C_SandBox\Debug\C_SandBox.pdb
