@@ -2,9 +2,12 @@
 //
 
 #include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
+
+void sp_in_linie(const char* str);
 int is_in(char* s, char c)
 {
 	while (*s)
@@ -19,14 +22,24 @@ int is_in(char* s, char c)
 	return 0;
 }
 
+void sp_in_linie(const char* str)
+{
+	while (*str)
+	{
+		if (*str == ' ') printf("%c", '-');//cout << "-";
+		else printf("%c", *str);//cout << *str;//
+		str++;
+	}
+}
+
 int main()
 {
    //cout << "Hello World!\n";
 	char test[5] = {'A','B','C','D','E'};
 
+	sp_in_linie("Acesta este un test");
 
-
-	is_in(test, 'F');
+	//is_in(test, 'F');
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -20,3 +20,24 @@ int main()
 
     is_in(test, 'F');
 }
+
+/*********************************************
+ *  2
+ * *******************************************/
+
+void sp_in_linie(const char *str);
+
+int main(void)
+{
+    sp_in_linie("Acesta este un test");
+}
+
+void sp_in_linie(const char *str)
+{
+    while(*str)
+    {
+        if(*str == ' ') printf("%c",'-');
+        else printf("%c",*str);
+        str++;
+    }
+}
