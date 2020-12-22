@@ -32,13 +32,26 @@ void sp_in_linie(const char* str)
 	}
 }
 
+int _pwr(register int m, register int e)
+{
+	register int temp;
+	temp = 1;
+	for (; e; e--) temp = temp * m;
+	return temp;
+}
+
+int xor (int a, int b)
+{
+	return (a || b) && !(a && b);
+}
+
 int main()
 {
    //cout << "Hello World!\n";
-	char test[5] = {'A','B','C','D','E'};
-
-	sp_in_linie("Acesta este un test");
-
+	//char test[5] = {'A','B','C','D','E'};
+	int test;
+	//sp_in_linie("Acesta este un test");
+	test =_pwr(4, 2);
 	//is_in(test, 'F');
 }
 

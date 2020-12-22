@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.2.178/W32 for ARM                  02/Dec/2020  23:24:13
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  22/Dec/2020  23:05:45
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        D:\Repositories\Projects\C_tests\IAR_Workbech_SandBox\Debug\List\SandBox.map
 #    Command line =  
-#        -f C:\Users\racas\AppData\Local\Temp\EW6CE7.tmp
+#        -f C:\Users\racas\AppData\Local\Temp\EWF026.tmp
 #        (D:\Repositories\Projects\C_tests\IAR_Workbech_SandBox\Debug\Obj\main.o
 #        --no_out_extension -o
 #        D:\Repositories\Projects\C_tests\IAR_Workbech_SandBox\Debug\Exe\SandBox.out
@@ -58,7 +58,7 @@ initialize by copy { rw };
   .intvec            ro code          0x0    0x40  vector_table_M.o [4]
                                    - 0x40    0x40
 
-"P1":                                      0x1ce0
+"P1":                                      0x1d1c
   .text              ro code         0x40   0xdf2  xprintffull_nomb.o [2]
   .text              ro code        0xe32     0x2  vector_table_M.o [4]
   .text              ro code        0xe34    0x16  strchr.o [4]
@@ -85,24 +85,28 @@ initialize by copy { rw };
   .text              ro code       0x1acc    0x80  iarttio.o [5]
   .text              ro code       0x1b4c    0x3c  XShttio.o [2]
   .text              ro code       0x1b88    0x38  packbits_init_single.o [4]
-  .text              ro code       0x1bc0    0x28  printf.o [2]
-  .text              ro code       0x1be8    0x28  data_init.o [4]
-  .text              ro code       0x1c10    0x22  iarwrite.o [5]
-  .iar.init_table    const         0x1c34    0x10  - Linker created -
-  .text              ro code       0x1c44    0x20  putchar.o [2]
-  .text              ro code       0x1c64    0x10  write.o [5]
-  .text              ro code       0x1c74    0x1e  dwrite.o [5]
-  .text              ro code       0x1c92    0x20  iarwstd.o [5]
-  .text              ro code       0x1cb4    0x1e  cmain.o [4]
-  .text              ro code       0x1cd2     0x4  low_level_init.o [2]
-  .text              ro code       0x1cd8    0x14  main.o [1]
-  .text              ro code       0x1cec     0x4  exit.o [2]
-  .text              ro code       0x1cf0     0xa  cexit.o [4]
-  .text              ro code       0x1cfa    0x16  xprout.o [2]
-  .text              ro code       0x1d10     0xc  cstartup_M.o [4]
-  .rodata            const         0x1d1c     0x0  packbits_init_single.o [4]
-  Initializer bytes  const         0x1d1c     0x4  <for P2-1>
-                                 - 0x1d20  0x1ce0
+  .text              ro code       0x1bc0    0x30  main.o [1]
+  .text              ro code       0x1bf0    0x28  printf.o [2]
+  .text              ro code       0x1c18    0x28  data_init.o [4]
+  .text              ro code       0x1c40    0x22  iarwrite.o [5]
+  .iar.init_table    const         0x1c64    0x10  - Linker created -
+  .text              ro code       0x1c74    0x20  putchar.o [2]
+  .text              ro code       0x1c94    0x10  write.o [5]
+  .text              ro code       0x1ca4    0x1e  dwrite.o [5]
+  .text              ro code       0x1cc2    0x20  iarwstd.o [5]
+  .text              ro code       0x1ce4    0x1e  cmain.o [4]
+  .text              ro code       0x1d02     0x4  low_level_init.o [2]
+  .text              ro code       0x1d06     0x4  exit.o [2]
+  .text              ro code       0x1d0c     0xa  cexit.o [4]
+  .text              ro code       0x1d16    0x16  xprout.o [2]
+  .text              ro code       0x1d2c     0xc  cstartup_M.o [4]
+  .rodata            const         0x1d38     0x8  main.o [1]
+  .rodata            const         0x1d40     0x8  main.o [1]
+  .rodata            const         0x1d48     0x8  main.o [1]
+  .rodata            const         0x1d50     0x8  main.o [1]
+  .rodata            const         0x1d58     0x0  packbits_init_single.o [4]
+  Initializer bytes  const         0x1d58     0x4  <for P2-1>
+                                 - 0x1d5c  0x1d1c
 
 "P2", part 1 of 2:                            0xd
   P2-1                        0x2000'0000     0xd  <Init block>
@@ -120,7 +124,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-       0x1d20     0x7'ffff  0x7'e2e0
+       0x1d5c     0x7'ffff  0x7'e2a4
   0x2000'000d  0x2000'000f       0x3
   0x2000'0410  0x2000'ffff    0xfbf0
 
@@ -133,7 +137,7 @@ Unused ranges:
           -------      ----
 Copy/packbits (__iar_packbits_init_single3)
     1 source range, total size 0x4 (30% of destination):
-               0x1d1c   0x4
+               0x1d58   0x4
     1 destination range, total size 0xd:
           0x2000'0000   0xd
 
@@ -150,9 +154,9 @@ command line/config:
     Total:
 
 D:\Repositories\Projects\C_tests\IAR_Workbech_SandBox\Debug\Obj: [1]
-    main.o                       20
+    main.o                       48       32
     -------------------------------------------------
-    Total:                       20
+    Total:                       48       32
 
 dl7M_tln.a: [2]
     XShttio.o                    60        3        9
@@ -212,7 +216,7 @@ shb_l.a: [5]
     Gaps                         30        2
     Linker created                        16    1 024
 -----------------------------------------------------
-    Grand Total:              7 434       22    1 037
+    Grand Total:              7 462       54    1 037
 
 
 *******************************************************************************
@@ -221,19 +225,19 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base        0x1c34          --   Gb  - Linker created -
-.iar.init_table$$Limit       0x1c44          --   Gb  - Linker created -
-?main                        0x1cb5         Code  Gb  cmain.o [4]
+.iar.init_table$$Base        0x1c64          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x1c74          --   Gb  - Linker created -
+?main                        0x1ce5         Code  Gb  cmain.o [4]
 CSTACK$$Base            0x2000'0010          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'0410          --   Gb  - Linker created -
 LoadInt                       0x1ef   0x7a  Code  Lc  xprintffull_nomb.o [2]
-Region$$Table$$Base          0x1c34          --   Gb  - Linker created -
-Region$$Table$$Limit         0x1c44          --   Gb  - Linker created -
+Region$$Table$$Base          0x1c64          --   Gb  - Linker created -
+Region$$Table$$Limit         0x1c74          --   Gb  - Linker created -
 _GenldFullNoMb                0xb31  0x274  Code  Lc  xprintffull_nomb.o [2]
 _LdtobFullNoMb                0x72d  0x3d6  Code  Lc  xprintffull_nomb.o [2]
 _LitobFullNoMb                0x5dd  0x10a  Code  Lc  xprintffull_nomb.o [2]
 _PrintfFullNoMb                0x41  0x19e  Code  Gb  xprintffull_nomb.o [2]
-_Prout                       0x1cfb   0x16  Code  Gb  xprout.o [2]
+_Prout                       0x1d17   0x16  Code  Gb  xprout.o [2]
 _PutcharsFullNoMb             0xda5   0x2e  Code  Lc  xprintffull_nomb.o [2]
 _PutfldFullNoMb               0x269  0x268  Code  Lc  xprintffull_nomb.o [2]
 _PuttxtFullNoMb               0x4d1  0x10c  Code  Lc  xprintffull_nomb.o [2]
@@ -248,15 +252,15 @@ __aeabi_i2d                  0x15b1         Code  Gb  S32ToDbl.o [3]
 __aeabi_ldiv0                0x1949         Code  Gb  I64DivZer.o [4]
 __aeabi_ui2d                 0x1929         Code  Gb  U32ToDbl.o [3]
 __aeabi_uldivmod              0xf1d         Code  Gb  I64DivMod.o [4]
-__cmain                      0x1cb5         Code  Gb  cmain.o [4]
-__dwrite                     0x1c75   0x1e  Code  Gb  dwrite.o [5]
+__cmain                      0x1ce5         Code  Gb  cmain.o [4]
+__dwrite                     0x1ca5   0x1e  Code  Gb  dwrite.o [5]
 __exit                       0x1ab9   0x14  Code  Gb  exit.o [5]
 __iar_Fail_s                  0xe4d   0x1c  Code  Gb  xfail_s.o [2]
 __iar_Memchr                  0xec5         Code  Gb  memchr.o [4]
 __iar_Strchr                  0xe35         Code  Gb  strchr.o [4]
 __iar_close_ttio             0x1acd   0x2e  Code  Gb  iarttio.o [5]
 __iar_dadd                   0x15e5         Code  Gb  DblSub.o [3]
-__iar_data_init3             0x1be9   0x28  Code  Gb  data_init.o [4]
+__iar_data_init3             0x1c19   0x28  Code  Gb  data_init.o [4]
 __iar_dsub                   0x194d         Code  Gb  DblAdd.o [3]
 __iar_dsubStart              0x195f         Code  Gb  DblAdd.o [3]
 __iar_frexp                  0x1375         Code  Gb  frexp.o [3]
@@ -267,11 +271,11 @@ __iar_ldexp64                0x1439         Code  Gb  ldexp.o [3]
 __iar_lookup_ttioh           0x1b7b    0x4  Code  Gb  XShttio.o [2]
 __iar_packbits_init_single3
                              0x1b89   0x38  Code  Gb  packbits_init_single.o [4]
-__iar_program_start          0x1d11         Code  Gb  cstartup_M.o [4]
+__iar_program_start          0x1d2d         Code  Gb  cstartup_M.o [4]
 __iar_scalbln64              0x1439         Code  Gb  ldexp.o [3]
 __iar_scalbn64               0x1439         Code  Gb  ldexp.o [3]
-__iar_sh_stdout              0x1c93   0x20  Code  Gb  iarwstd.o [5]
-__iar_sh_write               0x1c11   0x22  Code  Gb  iarwrite.o [5]
+__iar_sh_stdout              0x1cc3   0x20  Code  Gb  iarwstd.o [5]
+__iar_sh_write               0x1c41   0x22  Code  Gb  iarwrite.o [5]
 __iar_ttio_guard_lock        0x1b4d   0x1e  Code  Gb  XShttio.o [2]
 __iar_ttio_guard_unlock
                              0x1b6b   0x10  Code  Gb  XShttio.o [2]
@@ -281,22 +285,22 @@ __iar_unaligned_memcpy4
                              0x1311         Code  Gb  ABImemcpy_unaligned.o [4]
 __iar_unaligned_memcpy8
                              0x1311         Code  Gb  ABImemcpy_unaligned.o [4]
-__low_level_init             0x1cd3    0x4  Code  Gb  low_level_init.o [2]
+__low_level_init             0x1d03    0x4  Code  Gb  low_level_init.o [2]
 __vector_table                  0x0         Data  Gb  vector_table_M.o [4]
-__write                      0x1c65   0x10  Code  Gb  write.o [5]
-_call_main                   0x1cc1         Code  Gb  cmain.o [4]
-_exit                        0x1cf1         Code  Gb  cexit.o [4]
-_main                        0x1ccf         Code  Gb  cmain.o [4]
+__write                      0x1c95   0x10  Code  Gb  write.o [5]
+_call_main                   0x1cf1         Code  Gb  cmain.o [4]
+_exit                        0x1d0d         Code  Gb  cexit.o [4]
+_main                        0x1cff         Code  Gb  cmain.o [4]
 abort                        0x1943    0x6  Code  Gb  abort.o [2]
-exit                         0x1ced    0x4  Code  Gb  exit.o [2]
+exit                         0x1d07    0x4  Code  Gb  exit.o [2]
 frexp                        0x1369         Code  Gb  frexp.o [3]
 frexpl                       0x1369         Code  Gb  frexp.o [3]
 ldexp                        0x1439         Code  Gb  ldexp.o [3]
 ldexpl                       0x1439         Code  Gb  ldexp.o [3]
-main                         0x1cd9   0x14  Code  Gb  main.o [1]
+main                         0x1bc1   0x30  Code  Gb  main.o [1]
 memchr                        0xec5         Code  Gb  memchr.o [4]
-printf                       0x1bc1   0x28  Code  Gb  printf.o [2]
-putchar                      0x1c45   0x20  Code  Gb  putchar.o [2]
+printf                       0x1bf1   0x28  Code  Gb  printf.o [2]
+putchar                      0x1c75   0x20  Code  Gb  putchar.o [2]
 scalbln                      0x1439         Code  Gb  ldexp.o [3]
 scalblnl                     0x1439         Code  Gb  ldexp.o [3]
 scalbn                       0x1439         Code  Gb  ldexp.o [3]
@@ -314,8 +318,8 @@ ttio_guard              0x2000'000c    0x1  Data  Lc  XShttio.o [2]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  7 434 bytes of readonly  code memory
-     22 bytes of readonly  data memory
+  7 462 bytes of readonly  code memory
+     54 bytes of readonly  data memory
   1 037 bytes of readwrite data memory
 
 Errors: none
