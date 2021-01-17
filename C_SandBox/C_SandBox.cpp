@@ -3,65 +3,69 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+//#include <graph.h>
+#include <conio.h>
 
 using namespace std;
 
-
-void sp_in_linie(const char* str);
-int is_in(char* s, char c)
+struct salariat
 {
-	while (*s)
+	char nume[80];
+	int vasta;
+} sal;
+
+void lungime(char *mesaj)
+{
+	int lung;
+	lung = strlen(mesaj);
+	printf("%d",lung);
+}
+
+void  charRead(void)
+{
+	char ch;
+
+	do
 	{
-		if (*s == c)
-			return 1;
-		else
-			s++;
+		ch = getchar();
 
-	}
+		if (islower(ch)) ch = toupper(ch);
+		else ch = tolower(ch);
 
-	return 0;
+		putchar(ch);
+	} while (ch != '.');
 }
-
-void sp_in_linie(const char* str)
-{
-	while (*str)
-	{
-		if (*str == ' ') printf("%c", '-');//cout << "-";
-		else printf("%c", *str);//cout << *str;//
-		str++;
-	}
-}
-
-int _pwr(register int m, register int e)
-{
-	register int temp;
-	temp = 1;
-	for (; e; e--) temp = temp * m;
-	return temp;
-}
-
-int xor (int a, int b)
-{
-	return (a || b) && !(a && b);
-}
-
 int main()
 {
-   //cout << "Hello World!\n";
-	//char test[5] = {'A','B','C','D','E'};
-	int test;
-	//sp_in_linie("Acesta este un test");
-	test =_pwr(4, 2);
-	//is_in(test, 'F');
+	char str[80];
+	//gets(str);
+	printf("Lungimea este", strlen(str));
+	//char str[20];
+
+//	int x;
+
+	//for (x = 0; x < 3 && strcmp(str, "parola"); ++x)
+	//{
+	//	printf("Data parola");
+		//gets(str);// get string - nu stiu daca merge
+	//}
+
+	//if(x== 3) return /* passport was not given correctly*/
+		/* Altfel user-ul este connectat la ... */
+
+//	struct salariat* p = &sal;
+//	char a[20] = {'A','B','C'};
+	//int a, b;
+	//a[3] = 'D';
+//	lungime(a);
+	//printf("numere");
+	//scanf_s("%d%d", &a, &b);
+
+	//b ? printf("%d\n", a / b) : printf("DIV by 0");
+//	sal.vasta = 123; // apel prin referire la variabila
+//	p->vasta = 123; //apel prin pointer
+	
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

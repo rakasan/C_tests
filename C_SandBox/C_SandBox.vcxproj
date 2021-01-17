@@ -139,7 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Chapter2.cpp" />
+    <ClCompile Include="Chapter6_Functions.cpp" />
     <ClCompile Include="C_SandBox.cpp" />
+    <ClCompile Include="SearchAlgorithms.cpp" />
+    <ClCompile Include="SortAlgorithms.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
