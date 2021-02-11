@@ -4,16 +4,18 @@ int SequentialSerch(char* lista, int cont, char car)
 {
 	register int t;
 
-	for (t = 0; t < cont, ++t)
+	for (t = 0; t < cont; ++t)
 	{
 		if (car == lista[t]) return t;
 	}
-	return -1U;
+	return -1;
 }
 
 int BinarySearch(char* lista, int cont, char car)
 {
 	int med, min, max;
+	min = 1;
+	max = 3;
 	while (min <= max)
 	{
 		med = (min + max) / 2;

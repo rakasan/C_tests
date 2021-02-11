@@ -37,35 +37,59 @@ void  charRead(void)
 		putchar(ch);
 	} while (ch != '.');
 }
+
+char IndexList[5];
+char Counter = 1;
+
+static void __rearanjaza(int StartingIndex)
+{
+	int LCounter;
+	for (LCounter = StartingIndex; LCounter < Counter; LCounter++)
+	{
+		IndexList[LCounter] = IndexList[LCounter + 1];
+	}
+}
+
+static void __adaugaElement(char ID_Box,int stare)
+{
+	int i;
+
+	if (stare == 1) /* Adauga element in lista */
+	{
+		IndexList[Counter] = ID_Box;
+		Counter++;
+	}
+	else /* Scoate element din lista */
+	{
+		for (i = 1; i <= Counter; i++)
+		{
+			if (ID_Box == IndexList[i]) /* Found the element*/
+			{
+				__rearanjaza(i);
+
+				Counter--;
+			}
+		}
+	}
+}
+
+
 int main()
 {
-	char str[80];
-	//gets(str);
-	printf("Lungimea este", strlen(str));
-	//char str[20];
+	__adaugaElement('a', 1);
+	__adaugaElement('b', 1);
+	__adaugaElement('c', 1);
+	__adaugaElement('d', 1);
 
-//	int x;
+	__adaugaElement('b', 0);
+	__adaugaElement('b', 1);
 
-	//for (x = 0; x < 3 && strcmp(str, "parola"); ++x)
-	//{
-	//	printf("Data parola");
-		//gets(str);// get string - nu stiu daca merge
-	//}
+	__adaugaElement('d', 0);
 
-	//if(x== 3) return /* passport was not given correctly*/
-		/* Altfel user-ul este connectat la ... */
+	__adaugaElement('c', 0);
 
-//	struct salariat* p = &sal;
-//	char a[20] = {'A','B','C'};
-	//int a, b;
-	//a[3] = 'D';
-//	lungime(a);
-	//printf("numere");
-	//scanf_s("%d%d", &a, &b);
+	__adaugaElement('d', 1);
 
-	//b ? printf("%d\n", a / b) : printf("DIV by 0");
-//	sal.vasta = 123; // apel prin referire la variabila
-//	p->vasta = 123; //apel prin pointer
 	
 }
 

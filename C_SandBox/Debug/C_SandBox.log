@@ -1,1 +1,3 @@
-﻿  SearchAlgorithms.cpp
+﻿  C_SandBox.cpp
+D:\Repositories\Projects\C_tests\C_SandBox\C_SandBox.cpp(81,10): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'int'
+  C_SandBox.vcxproj -> D:\Repositories\Projects\C_tests\C_SandBox\Debug\C_SandBox.exe

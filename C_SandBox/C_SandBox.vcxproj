@@ -144,6 +144,7 @@
     <ClCompile Include="C_SandBox.cpp" />
     <ClCompile Include="SearchAlgorithms.cpp" />
     <ClCompile Include="SortAlgorithms.cpp" />
+    <ClCompile Include="Stack_V1.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
